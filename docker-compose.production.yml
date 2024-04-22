@@ -17,8 +17,6 @@ services:
     volumes:
       - static_volume:/backend_static
       - media:/media/
-    depends_on:
-      - db
   frontend:
     image: anafob0330/kittygram_frontend
     env_file: .env
@@ -31,8 +29,5 @@ services:
     volumes:
       - static:/staticfiles/
       - media:/media/
-    depends_on:
-      - backend
-      - frontend
     ports:
       - 9000:80
