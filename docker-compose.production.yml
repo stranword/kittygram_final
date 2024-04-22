@@ -18,12 +18,12 @@ services:
     volumes:
       - static_volume:/backend_static
       - media:/media/
-  frontend:
-    image: anafob0330/kittygram_frontend
-    env_file: .env
-    command: cp -r /app/build/. /frontend_static/
-    volumes:
-      - static_volume:/frontend_static
+  frontend: 
+    image: anafob0330/kittygram_frontend 
+    env_file: .env 
+    command: cp -r /app/build/. /frontend_static/ 
+    volumes: 
+      - static_volume:/frontend_static 
   gateway:
     image: anafob0330/kittygram_gateway
     env_file: .env
