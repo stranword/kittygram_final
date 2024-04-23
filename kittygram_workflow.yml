@@ -13,7 +13,7 @@ jobs:
         image: postgres:13.10
         env:
           POSTGRES_USER: kittygram_user
-          POSTGRES_PASSWORD: mysecretpassword
+          POSTGRES_PASSWORD: kittygram_password
           POSTGRES_DB: kittygram
           DB_HOST: 127.0.0.1
           DB_PORT: 5432
@@ -35,7 +35,7 @@ jobs:
     - name: Test with flake8
       env:
         POSTGRES_USER: kittygram_user
-        POSTGRES_PASSWORD: mysecretpassword
+        POSTGRES_PASSWORD: kittygram_password
         POSTGRES_DB: kittygram
         DB_HOST: 127.0.0.1
         DB_PORT: 5432
@@ -48,7 +48,7 @@ jobs:
         image: postgres:13.10
         env:
           POSTGRES_USER: kittygram_user
-          POSTGRES_PASSWORD: mysecretpassword
+          POSTGRES_PASSWORD: kittygram_password
           POSTGRES_DB: kittygram
         ports:
           - 5432:5432
@@ -67,7 +67,7 @@ jobs:
     - name: Test with django tests
       env:
         POSTGRES_USER: kittygram_user
-        POSTGRES_PASSWORD: mysecretpassword
+        POSTGRES_PASSWORD: kittygram_password
         POSTGRES_DB: kittygram
         DB_HOST: 127.0.0.1
         DB_PORT: 5432
