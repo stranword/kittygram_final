@@ -10,4 +10,4 @@ RUN pip install -r requirements.txt --no-cache-dir
 
 COPY . .
 
-CMD ["/start-app.sh"]
+ENTRYPOINT ["./start-app.sh"]
