@@ -5,6 +5,7 @@ volumes:
   static_volume:
   media:
 
+
 services:
   db:
     image: postgres:13.10
