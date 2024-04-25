@@ -5,7 +5,6 @@ volumes:
   static_volume:
   media:
 
-
 services:
   kittygram:
     image: postgres:13.10
