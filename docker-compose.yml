@@ -2,7 +2,7 @@ version: '3'
 
 volumes:
   pg_data:
-  static:
+  static_volume:
   media:
 
 services:
@@ -27,7 +27,7 @@ services:
     build: ./nginx/
     env_file: .env
     volumes:
-      - static:/staticfiles/
+      - static_volume:/staticfiles/
       - media:/media/
     ports:
       - 9000:80
