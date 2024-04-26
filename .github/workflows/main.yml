@@ -181,7 +181,7 @@ jobs:
             sudo docker compose -f docker-compose.production.yml pull
             sudo docker compose -f docker-compose.production.yml down
             sudo docker compose -f docker-compose.production.yml up -d
-            sudo docker prune -af
+            sudo docker image prune -f
   send_message:
     runs-on: ubuntu-latest
     needs: deploy
