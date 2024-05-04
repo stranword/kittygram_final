@@ -5,3 +5,4 @@ sleep 10
 python manage.py migrate
 python manage.py collectstatic
 python manage.py cp -r /app/collected_static/. /backend_static/static/
+yes
