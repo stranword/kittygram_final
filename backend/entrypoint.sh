@@ -1,10 +1,9 @@
 #!/bin/bash
 
-gunicorn kittygram_backend.wsgi:application --bind 0.0.0.0:9000
+python /app/manage.py migrate
 
-/usr/local/bin/python /app/manage.py migrate
-
-/usr/local/bin/python /app/manage.py collectstatic --noinput
+python /app/manage.py collectstatic --noinput
 
 mv /app/collected_static/* /backend_static/static/
 
+gunicorn kittygram_backend.wsgi:application --bind 0.0.0.0:9000
