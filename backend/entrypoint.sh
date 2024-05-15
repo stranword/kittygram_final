@@ -1,6 +1,6 @@
 #!/bin/bash
 
-gunicorn kittygram_backend.wsgi:application --bind 0.0.0.0:8000
+gunicorn kittygram_backend.wsgi:application --bind 0.0.0.0:9000
 
 /usr/local/bin/python /app/manage.py migrate
 
