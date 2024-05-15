@@ -12,4 +12,4 @@ RUN chmod +x entrypoint.sh
 
 COPY . .
 
-ENTRYPOINT ["/app/entrypoint.sh"]
+ENTRYPOINT ["./entrypoint.sh"]
